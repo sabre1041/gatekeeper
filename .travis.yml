@@ -18,3 +18,9 @@ deploy:
     on:
       repo: open-policy-agent/gatekeeper
       branch: master
+  - provider: script
+    skip_cleanup: true
+    script: make travis-dev-release
+    on:
+      repo: sabre1041/gatekeeper
+      branch: release-test
